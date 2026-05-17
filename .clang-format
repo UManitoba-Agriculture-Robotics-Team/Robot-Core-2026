@@ -1,0 +1,53 @@
+---
+# Clang-Format Configuration for Robot-Core-2026
+# Based on Google C++ Style with minor tweaks for readability.
+# Docs: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: Google
+
+# Use 4-space indentation (easier to read on smaller screens / terminals)
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Keep lines under 100 characters
+ColumnLimit: 100
+
+# Braces on the same line as the statement (Google default)
+BreakBeforeBraces: Attach
+
+# Indent access modifiers (public/private/protected) one level inside the class
+AccessModifierOffset: -4
+IndentAccessModifiers: false
+
+# Pointer and reference alignment
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Always use braces around single-line if/else/for/while bodies
+InsertBraces: true
+
+# Sort #include blocks alphabetically
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+
+# Keep short functions on a single line only if they are empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# Constructor initializer lists
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerIndentWidth: 4
+
+# Namespace formatting
+FixNamespaceComments: true
+
+# Align consecutive assignments and declarations for readability
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+
+# Spaces
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+SpacesInParentheses: false

@@ -1,0 +1,31 @@
+{
+  // Format C++ files automatically on save using clang-format
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "ms-vscode.cpptools",
+
+  // C/C++ specific settings
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+
+  // Tell the C++ extension to use the .clang-format file in the repo root
+  "C_Cpp.clang_format_style": "file",
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+
+  // Files
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // Exclude build artifacts from the file explorer
+  "files.exclude": {
+    "**/build": true,
+    "**/Build": true,
+    "**/.cache": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  // Recommended extensions for this project.
+  // VS Code will prompt teammates to install these when they open the repo.
+  "recommendations": [
+    "ms-vscode.cpptools",
+    "platformio.org.platformio-ide",
+    "editorconfig.editorconfig",
+    "xaver.clang-format"
+  ]
+}

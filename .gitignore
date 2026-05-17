@@ -67,3 +67,14 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# IDE / Editor state (keep .vscode/settings.json and extensions.json committed)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db

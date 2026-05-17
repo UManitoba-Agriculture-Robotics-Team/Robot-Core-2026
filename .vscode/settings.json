@@ -12,6 +12,11 @@
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.formatOnSave": true
   },
+  
+  // Treat Arduino .ino files as C++ for formatting
+  "files.associations": {
+    "*.ino": "cpp"
+  },
 
   // Tell the C++ extension to use the .clang-format file in the repo root
   "C_Cpp.clang_format_style": "file",

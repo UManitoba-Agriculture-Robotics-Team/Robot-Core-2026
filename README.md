@@ -31,7 +31,6 @@ Robot-Core-2026/
 |-- docs/
 |   +-- CODING_STANDARDS.md # Naming conventions, Arduino style rules, etc.
 |-- src/
-|   |-- main.cpp            # Entry point (setup and loop)
 |   |-- drive/              # Motor and drivetrain control
 |   |-- sensors/            # Sensor drivers and data processing
 |   |-- navigation/         # Path planning and localization
@@ -51,6 +50,7 @@ You need the following tools installed on your machine before you can build or c
 |------|--------------|
 | **VS Code** | Our recommended code editor |
 | **PlatformIO Extension** | VS Code extension to build/flash Arduino code and manage dependencies |
+| **Arduino IDE** | (Optional) Alternative editor for those more comfortable with standard Arduino tools |
 | **clang-format** | Automatically formats C++ code (can be installed via VS Code extension) |
 | **Git** | Version control |
 
@@ -65,22 +65,20 @@ You need the following tools installed on your machine before you can build or c
    cd Robot-Core-2026
    ```
 
-2. **Open in VS Code**
+2. **Open your Editor**
 
-   Open the `Robot-Core-2026` folder in VS Code.
+   **If using VS Code (Recommended):**
+   Open the `Robot-Core-2026` folder in VS Code. VS Code should show a pop-up recommending extensions for this repository. Click **"Install All"**.
+   (If you don't see the prompt, open the Extensions tab, search for `@recommended`, and install the PlatformIO IDE and Clang-Format extensions). Wait for PlatformIO to initialize.
 
-3. **Install Recommended Extensions**
-
-   VS Code should show a pop-up in the bottom right corner recommending extensions for this repository. Click **"Install All"**.
-   (If you don't see the prompt, open the Extensions tab on the left sidebar, search for `@recommended`, and install the PlatformIO IDE and Clang-Format extensions).
-
-4. **Wait for PlatformIO to Initialize**
-
-   The first time you open a PlatformIO project, it will take a few minutes to download the necessary Arduino toolchains and frameworks. Let it finish.
+   **If using Arduino IDE:**
+   Simply open the `Robot-Core-2026.ino` file in the Arduino IDE (Version 2.x recommended).
 
 ---
 
 ## Building and Flashing
+
+### Using VS Code & PlatformIO (Recommended)
 
 With PlatformIO installed, you will see a little **Alien head icon** on the left sidebar, and a row of icons on the bottom blue status bar of VS Code.
 
@@ -89,6 +87,13 @@ With PlatformIO installed, you will see a little **Alien head icon** on the left
 - **Serial Monitor:** Click the **Plug** icon on the bottom status bar to view text printed via `Serial.println()`.
 
 *(Note: If you change the specific Arduino board we are using, you will need to update the `board` property in the `platformio.ini` file).*
+
+### Using Arduino IDE
+
+If you prefer the standard Arduino experience:
+1. Open `Robot-Core-2026.ino` in the Arduino IDE.
+2. The `src` folder (and all our sub-modules) will automatically be included and compiled by the Arduino IDE.
+3. Use the standard **Verify** (Checkmark) and **Upload** (Arrow) buttons at the top left of the Arduino IDE just like any normal Arduino project.
 
 ---
 
